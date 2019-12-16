@@ -1,0 +1,38 @@
+/* Empty. Add your own CSS if you like */
+
+
+
+  
+  .page-phone-lists .options{
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .page-phone-lists .options .item-accordion{
+    width: 50%;
+    text-align: center;
+  }
+
+
+  
+  .page-phone-lists .button-edit{
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .page-phone-detail .button-edit{
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .page-phone-add .button-edit{
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+  }
+

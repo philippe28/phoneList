@@ -1,0 +1,26 @@
+<ion-view view-title="Novo Contato" class="page-phone-add" >
+	<ion-nav-buttons side="left" ng-click="myGoBack()">
+       
+    </ion-nav-buttons>
+  <ion-content>
+            <form name="formGuardar" ng-submit="finish()">
+            <div class="list">
+
+                <label class="item item-input">
+                    <span class="input-label"><b>Nome</b></span>
+                    <input type="text" ng-model="contact.name" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label"><b>Telefone</b></span>
+                    <input type="text" ng-model="contact.number" required>
+                </label>
+            </div>
+        </form>
+             <button ng-click="finish()" class="button button-positive small_button"  >Continuar</button>
+  </ion-content>
+
+<a class="bar bar-footer bar-balanced button-edit" ng-click="finish()">
+ Concluir
+</a>
+
+</ion-view>

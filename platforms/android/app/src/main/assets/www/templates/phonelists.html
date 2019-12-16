@@ -1,0 +1,45 @@
+<ion-view class="page-phone-lists" view-title="Lista Telefonica">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search">
+      </label>
+    </div>
+    <!-- <ion-list>
+
+
+      <a class="item item-icon-left" ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        <i class="icon ion-person-stalker"></i>
+        {{playlist.title}}
+      </a>
+
+    </ion-list> -->
+
+    <ion-list>
+      <div ng-repeat="group in playlists">
+        <ion-item class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
+          <i class="icon ion-person-stalker" ></i>
+          &nbsp;
+           {{group.title}}
+        </ion-item>
+        <!-- ng-repeat="item in group.items" -->
+        <div class="options">
+        <ion-item class="item-accordion" ng-show="isGroupShown(group)">
+          Chamar
+        </ion-item>
+        <ion-item class="item-accordion" ng-show="isGroupShown(group)" href="#/app/phonedetail/{{playlist.id}}" >
+          Editar
+        </ion-item>
+        <ion-item class="item-accordion" ng-show="isGroupShown(group)">
+          Excluir
+        </ion-item>
+      </div>
+      </div>
+    </ion-list>
+
+  </ion-content>
+
+
+  
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view cache-view="false" class="page-phone-lists" view-title="Lista Telefonica">
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Buscar" ng-model="searchText">
+      </label>
+    </div>
+    <ion-list>
+      <div ng-repeat="contact in contacts | filter:searchText">
+        <ion-item class="item-stable" ng-click="toggleContact(contact)" >
+          <i class="icon ion-person-stalker" ></i>
+         
+           {{contact.name}}
+        </ion-item>
+
+        <div class="options">
+
+        <ion-item class="item-accordion" ng-show="isContactShown(contact)" href="#/app/phonedetail/{{contact.id}}" >
+          Editar
+        </ion-item>
+        <ion-item class="item-accordion" ng-show="isContactShown(contact)" ng-click="delete(contact.id)">
+          Excluir
+        </ion-item>
+      </div>
+      </div>
+    </ion-list>
+
+  </ion-content>
+
+<a class="bar bar-footer bar-balanced button-edit" href="#/app/phoneadd">
+ Adicionar Contato
+</a>
+  
+</ion-view>

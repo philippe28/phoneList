@@ -1,0 +1,22 @@
+<ion-view view-title="Detalhes" class="page-phone-detail">
+  <ion-content>
+                <form name="formGuardar" ng-submit="finish()">
+            <div class="list">
+
+                <label class="item item-input">
+                    <span class="input-label"><b>Nome</b></span>
+                    <input type="text" ng-model="contact.name" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label"><b>Telefone</b></span>
+                    <input type="text" ng-model="contact.number" required>
+                </label>
+            </div>
+        </form>
+            
+  </ion-content>
+
+  <a class="bar bar-footer bar-balanced button-edit" ng-click="finish()">
+ Concluir
+</a>
+</ion-view>
